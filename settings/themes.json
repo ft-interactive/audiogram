@@ -11,7 +11,7 @@
     "foregroundColor": "white",
     "captionAlign": "left",
     "captionTop": 155,
-    "captionFont": "600 46px 'Metric'",
+    "captionFont": "400 46px 'Metric'",
     "captionLineHeight": 46,
     "captionLineSpacing": 7,
     "captionLeft": 215,
@@ -46,7 +46,7 @@
     "backgroundImage": "Audiogram_ListentoLucy.jpg",
     "captionTop": 288,
     "captionLeft": 215,
-    "captionRight": 713    
+    "captionRight": 713
   },
   "Management Book Club": {
     "waveColor": "#bc8bb8",

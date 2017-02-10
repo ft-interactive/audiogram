@@ -27,6 +27,6 @@ module.exports = {
     // { family: "Source Sans Pro", file: path.join(__dirname, "fonts", "SourceSansPro-Bold.ttf"), weight: "bold" },
     // { family: "Source Sans Pro", file: path.join(__dirname, "fonts", "SourceSansPro-Italic.ttf"), style: "italic" },
     // { family: "Source Sans Pro", file: path.join(__dirname, "fonts", "SourceSansPro-BoldItalic.ttf"), weight: "bold", style: "italic" },
-    { family: "Metric", file: path.join(__dirname, "fonts", "Metric-Semibold.otf"), weight: 600 }
+    { family: "Metric", file: path.join(__dirname, "fonts", "Metric-Regular.otf"), weight: 400 }
   ]
 };
