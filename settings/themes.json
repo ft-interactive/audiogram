@@ -68,6 +68,13 @@
     "waveColor": "#e5aa15",
     "backgroundImage": "Audiog640_BigRead.jpg"
   },
+  "Every Thing Else": {
+    "waveBottom": 719,
+    "waveTop": 320,
+    "pattern": "bricks",
+    "backgroundImage": "everythingelse.png",
+    "foregroundColor": "#fff"
+  },
   "Hard Currency": {
     "waveColor": "#63c1a7",
     "backgroundImage": "Audiogram_HardCurrency.jpg"
@@ -256,13 +263,6 @@
   "World in 60 seconds": {
     "waveColor": "#e87092",
     "backgroundImage": "Audiogram_Worldin60sec.jpg"
-  },
-  "Old Every Thing Else": {
-    "waveBottom": 719,
-    "waveTop": 320,
-    "pattern": "bricks",
-    "backgroundImage": "everythingelse.png",
-    "foregroundColor": "#fff"
   },
   "Old TechTonic": {
     "foregroundColor": "#b8b1a9 ",
