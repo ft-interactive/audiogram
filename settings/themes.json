@@ -265,7 +265,7 @@
     "backgroundImage": "Audiogram_Worldin60sec.jpg"
   },
   "Old TechTonic": {
-    "foregroundColor": "#b8b1a9 ",
+    "foregroundColor": "#b8b1a9",
     "waveTop": 420,
     "waveBottom": 720,
     "backgroundImage": "techtonic.jpg"
