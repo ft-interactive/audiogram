@@ -466,12 +466,6 @@ cached-path-relative@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cached-path-relative/-/cached-path-relative-1.0.0.tgz#d1094c577fbd9a8b8bd43c96af6188aa205d05f4"
 
-canvas-prebuilt@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/canvas-prebuilt/-/canvas-prebuilt-1.6.0.tgz#f8dd9abe81fdc2103a39d8362df3219d6d83f788"
-  dependencies:
-    node-pre-gyp "^0.6.29"
-
 "canvas@git+https://github.com/chearon/node-canvas.git#12971f64a66b":
   version "1.6.0"
   resolved "git+https://github.com/chearon/node-canvas.git#12971f64a66b"
