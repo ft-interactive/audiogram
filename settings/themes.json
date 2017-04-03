@@ -269,5 +269,11 @@
     "waveTop": 420,
     "waveBottom": 720,
     "backgroundImage": "techtonic.jpg"
+  },
+  "Trump FT Interview": {
+    "backgroundImage": "TrumpAudiogram.jpg",
+    "waveColor": "#ffffff",
+    "waveTop": 400,
+    "waveBottom": 700
   }
 }
