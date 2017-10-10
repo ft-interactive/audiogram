@@ -68,6 +68,23 @@
     "waveColor": "#e5aa15",
     "backgroundImage": "Audiog640_BigRead.jpg"
   },
+  "Business Books": {
+    "waveColor": "#bc8bb8",
+    "backgroundImage": "Audiogram_BusinessBooks.jpg"
+  },
+  "Business Books Square": {
+    "width": 640,
+    "height": 640,
+    "waveTop": 340,
+    "waveBottom": 540,
+    "captionFont": "200 64px 'Metric'",
+    "captionLineHeight": 64,
+    "captionTop": 20,
+    "captionLeft": 20,
+    "captionRight": 620,
+    "waveColor": "#bc8bb8",
+    "backgroundImage": "Audiog640_BusinessBooks.jpg"
+  },  
   "Every Thing Else": {
     "waveBottom": 719,
     "waveTop": 320,
@@ -132,23 +149,6 @@
     "captionTop": 288,
     "captionLeft": 215,
     "captionRight": 713
-  },
-  "Management Book Club": {
-    "waveColor": "#bc8bb8",
-    "backgroundImage": "Audiogram_MgmtBookClub.jpg"
-  },
-  "Management Book Club Square": {
-    "width": 640,
-    "height": 640,
-    "waveTop": 340,
-    "waveBottom": 540,
-    "captionFont": "200 64px 'Metric'",
-    "captionLineHeight": 64,
-    "captionTop": 20,
-    "captionLeft": 20,
-    "captionRight": 620,
-    "waveColor": "#bc8bb8",
-    "backgroundImage": "Audiog640_MgmtBookClub.jpg"
   },
   "Money Show": {
     "waveColor": "#91c174",
@@ -273,7 +273,7 @@
   "Trump FT Interview": {
     "backgroundImage": "TrumpAudiogram.jpg",
     "waveColor": "#ffffff",
-    "waveTop": 400,
+    "waveTop": 600,
     "waveBottom": 700
   }
 }
