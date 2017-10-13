@@ -68,6 +68,13 @@
     "waveColor": "#e5aa15",
     "backgroundImage": "Audiog640_BigRead.jpg"
   },
+  "Brexit Unspun": {
+    "height": 628,
+    "waveColor": "#fff1e0",
+    "backgroundImage": "bigger_brex2.jpg",
+    "waveTop": 410,
+    "waveBottom": 610
+  },
   "Business Books": {
     "waveColor": "#bc8bb8",
     "backgroundImage": "Audiogram_BusinessBooks.jpg"
@@ -84,7 +91,7 @@
     "captionRight": 620,
     "waveColor": "#bc8bb8",
     "backgroundImage": "Audiog640_BusinessBooks.jpg"
-  },  
+  },
   "Every Thing Else": {
     "waveBottom": 719,
     "waveTop": 320,
