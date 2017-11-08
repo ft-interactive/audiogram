@@ -216,6 +216,19 @@
     "waveColor": "#e59cb6",
     "backgroundImage": "Audiogram_StartupStories.jpg"
   },
+  "Start-up Stories Square": {
+    "width": 640,
+    "height": 640,
+    "waveTop": 340,
+    "waveBottom": 540,
+    "captionFont": "200 64px 'Metric'",
+    "captionLineHeight": 64,
+    "captionTop": 20,
+    "captionLeft": 20,
+    "captionRight": 620,
+    "waveColor": "#e59cb6",
+    "backgroundImage": "Audiog640_StartupStories.jpg"
+  },
   "Tech Tonic": {
     "waveColor": "#78b6dd",
     "backgroundImage": "Audiogram_TechTonic.jpg"
@@ -237,7 +250,7 @@
     "waveColor": "#e98949",
     "backgroundImage": "Audiogram_WldTechFders.jpg"
   },
-  "World Tech Square": {
+  "World Tech Founders Square": {
     "width": 640,
     "height": 640,
     "waveTop": 340,
@@ -270,6 +283,19 @@
   "World in 60 seconds": {
     "waveColor": "#e87092",
     "backgroundImage": "Audiogram_Worldin60sec.jpg"
+  },
+  "World in 60 seconds Square": {
+    "width": 640,
+    "height": 640,
+    "waveTop": 340,
+    "waveBottom": 540,
+    "captionFont": "200 64px 'Metric'",
+    "captionLineHeight": 64,
+    "captionTop": 20,
+    "captionLeft": 20,
+    "captionRight": 620,
+    "waveColor": "#e87092",
+    "backgroundImage": "Audiog640_Worldin60sec.jpg"
   },
   "Old TechTonic": {
     "foregroundColor": "#b8b1a9 ",
