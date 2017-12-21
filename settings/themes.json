@@ -51,6 +51,23 @@
     "waveColor": "#b59e6d",
     "backgroundImage": "Audiog640_BankingWkly.jpg"
   },
+  "Big Picture": {
+    "waveColor": "#98C6E2",
+    "backgroundImage": "Audiogram_BigPicture.jpg"
+  },
+  "Big Picture Square": {
+    "width": 640,
+    "height": 640,
+    "waveTop": 340,
+    "waveBottom": 540,
+    "captionFont": "200 64px 'Metric'",
+    "captionLineHeight": 64,
+    "captionTop": 20,
+    "captionLeft": 20,
+    "captionRight": 620,
+    "waveColor": "#98C6E2",
+    "backgroundImage": "Audiog640_BigPicture.jpg"
+  },
   "Big Read": {
     "waveColor": "#e5aa15",
     "backgroundImage": "Audiogram_BigRead.jpg"
