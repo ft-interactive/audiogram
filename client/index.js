@@ -43,6 +43,7 @@ function submitted() {
       caption = preview.caption(),
       selection = preview.selection(),
       backgroundFile = preview.backgroundFile(),
+      waveformColor = preview.waveformColor(),
       file = preview.file();
 
   if (!file) {
@@ -65,6 +66,7 @@ function submitted() {
 
   formData.append("audio", file);
   formData.append("backgroundImage", backgroundFile);
+  formData.append("waveformColor", waveformColor);
   if (selection.start || selection.end) {
     formData.append("start", selection.start);
     formData.append("end", selection.end);
@@ -176,6 +178,7 @@ function initialize(err, themesWithImages) {
   // If there's an initial piece of audio (e.g. back button) load it
   d3.select("#input-audio").on("change", updateAudioFile).each(updateAudioFile);
   d3.select("#input-background-image").on("change", updateBackgroundFile).each(updateBackgroundFile);
+  d3.select("#input-waveform-color").on("change", updateWaveformColor).each(updateWaveformColor);
 
   d3.select("#return").on("click", function(){
     d3.event.preventDefault();
@@ -227,6 +230,10 @@ function updateBackgroundFile() {
       console.warn(err);
     }
   })
+}
+
+function updateWaveformColor() {
+  preview.loadWaveformColor(this.value);
 }
 
 function updateCaption() {

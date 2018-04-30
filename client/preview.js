@@ -13,6 +13,7 @@ var theme,
     file,
     backgroundFile,
     backgroundFileCanvasImage,
+    waveformColor,
     selection;
 
 function _file(_) {
@@ -21,6 +22,10 @@ function _file(_) {
 
 function _backgroundFile(_) {
   return arguments.length ? (backgroundFile = _) : backgroundFile;
+}
+
+function _waveformColor(_) {
+  return arguments.length ? (waveformColor = _) : waveformColor;
 }
 
 function _theme(_) {
@@ -84,9 +89,12 @@ function redraw() {
 
   renderer.backgroundImage(backgroundFileCanvasImage || theme.backgroundImageFile || null);
 
+  renderer.waveformColor(waveformColor || theme.waveColor || theme.foregroundColor || "#000");
+
   renderer.drawFrame(context, {
     caption: caption,
     waveform: sampleWave,
+    waveformColor: waveformColor,
     frame: 0
   });
 
@@ -132,12 +140,19 @@ function loadBackgroundImage(f, cb) {
   }
 }
 
+function loadWaveformColor (f) {
+  waveformColor = f;
+  redraw();
+}
+
 module.exports = {
   caption: _caption,
   theme: _theme,
   file: _file,
   backgroundFile: _backgroundFile,
+  waveformColor: _waveformColor,
   selection: _selection,
   loadAudio: loadAudio,
-  loadBackgroundImage: loadBackgroundImage
+  loadBackgroundImage: loadBackgroundImage,
+  loadWaveformColor: loadWaveformColor,
 };
