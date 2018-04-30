@@ -58,11 +58,12 @@ module.exports = function(t) {
       context.drawImage(backgroundImage, 0, 0, theme.width, theme.height);
     }
 
+    var customTheme = Object.assign({}, theme);
     if (waveformColor) {
-      theme.waveColor = waveformColor;
+      customTheme.waveColor = waveformColor;
     }
 
-    patterns[theme.pattern || "wave"](context, options.waveform, theme);
+    patterns[theme.pattern || "wave"](context, options.waveform, customTheme);
 
     // Write the caption
     if (options.caption) {

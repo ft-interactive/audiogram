@@ -229,7 +229,15 @@ function updateBackgroundFile() {
     if(err) {
       console.warn(err);
     }
-  })
+  });
+
+  // disable option to customize waveform color unless there is a custom background
+  if (this.files[0]) {
+    d3.select('#input-waveform-color').attr('disabled', null);
+  } else {
+    d3.select('#input-waveform-color').attr('disabled', 'disabled');
+    preview.loadWaveformColor(null);
+  }
 }
 
 function updateWaveformColor() {

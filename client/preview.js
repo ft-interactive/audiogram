@@ -89,12 +89,16 @@ function redraw() {
 
   renderer.backgroundImage(backgroundFileCanvasImage || theme.backgroundImageFile || null);
 
-  renderer.waveformColor(waveformColor || theme.waveColor || theme.foregroundColor || "#000");
+  var waveformColorCustom = theme.waveColor || theme.foregroundColor || "#000";
+  if (backgroundFileCanvasImage) {
+    // if there is a custom background, get custom waveform color
+    waveformColorCustom = waveformColor
+  }
+  renderer.waveformColor(waveformColorCustom);
 
   renderer.drawFrame(context, {
     caption: caption,
     waveform: sampleWave,
-    waveformColor: waveformColor,
     frame: 0
   });
 
