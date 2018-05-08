@@ -109,6 +109,11 @@ Audiogram.prototype.drawFrames = function(cb) {
 
     self.status("frames");
 
+    // render custom waveform colour if there is a custom background image 
+    if (self.settings.backgroundImage !== 'undefined') {
+      self.settings.theme.waveColor = self.settings.waveformColor;
+    }
+
     drawFrames(renderer, {
       width: self.settings.theme.width,
       height: self.settings.theme.height,
