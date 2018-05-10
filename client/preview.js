@@ -11,10 +11,21 @@ var context = d3.select("canvas").node().getContext("2d");
 var theme,
     caption,
     file,
+    backgroundFile,
+    backgroundFileCanvasImage,
+    waveformColor,
     selection;
 
 function _file(_) {
   return arguments.length ? (file = _) : file;
+}
+
+function _backgroundFile(_) {
+  return arguments.length ? (backgroundFile = _) : backgroundFile;
+}
+
+function _waveformColor(_) {
+  return arguments.length ? (waveformColor = _) : waveformColor;
 }
 
 function _theme(_) {
@@ -76,7 +87,14 @@ function redraw() {
 
   var renderer = getRenderer(theme);
 
-  renderer.backgroundImage(theme.backgroundImageFile || null);
+  renderer.backgroundImage(backgroundFileCanvasImage || theme.backgroundImageFile || null);
+
+  var waveformColorCustom = theme.waveColor || theme.foregroundColor || "#000";
+  if (backgroundFileCanvasImage) {
+    // if there is a custom background, get custom waveform color
+    waveformColorCustom = waveformColor
+  }
+  renderer.waveformColor(waveformColorCustom);
 
   renderer.drawFrame(context, {
     caption: caption,
@@ -106,10 +124,39 @@ function loadAudio(f, cb) {
 
 }
 
+function loadBackgroundImage(f, cb) {
+  var reader;
+  backgroundFile = f;
+  if(backgroundFile) {
+    reader = new FileReader();
+    reader.readAsDataURL(backgroundFile);
+    reader.onload = function(event) {
+      backgroundFileCanvasImage = new Image();
+      backgroundFileCanvasImage.onload = function(event) {
+        redraw();
+        cb(null);
+      }
+      backgroundFileCanvasImage.src = event.target.result;
+    }
+  } else {
+    backgroundFileCanvasImage = null;
+    redraw();
+  }
+}
+
+function loadWaveformColor (f) {
+  waveformColor = f;
+  redraw();
+}
+
 module.exports = {
   caption: _caption,
   theme: _theme,
   file: _file,
+  backgroundFile: _backgroundFile,
+  waveformColor: _waveformColor,
   selection: _selection,
-  loadAudio: loadAudio
+  loadAudio: loadAudio,
+  loadBackgroundImage: loadBackgroundImage,
+  loadWaveformColor: loadWaveformColor,
 };

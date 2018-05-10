@@ -6,12 +6,19 @@ module.exports = function(t) {
 
   var renderer = {},
       backgroundImage,
+      waveformColor,
       wrapText,
       theme;
 
   renderer.backgroundImage = function(_) {
     if (!arguments.length) return backgroundImage;
     backgroundImage = _;
+    return this;
+  };
+
+  renderer.waveformColor = function(_) {
+    if (!arguments.length) return waveformColor;
+    waveformColor = _;
     return this;
   };
 
@@ -22,7 +29,7 @@ module.exports = function(t) {
 
     // Default colors
     theme.backgroundColor = theme.backgroundColor || "#fff";
-    theme.waveColor = theme.waveColor || theme.foregroundColor || "#000";
+    // theme.waveColor = theme.waveColor || theme.foregroundColor || "#000";
     theme.captionColor = theme.captionColor || theme.foregroundColor || "#000";
 
     // Default wave dimensions
@@ -51,7 +58,12 @@ module.exports = function(t) {
       context.drawImage(backgroundImage, 0, 0, theme.width, theme.height);
     }
 
-    patterns[theme.pattern || "wave"](context, options.waveform, theme);
+    var customTheme = Object.assign({}, theme);
+    if (waveformColor) {
+      customTheme.waveColor = waveformColor;
+    }
+
+    patterns[theme.pattern || "wave"](context, options.waveform, customTheme);
 
     // Write the caption
     if (options.caption) {

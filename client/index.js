@@ -4,7 +4,7 @@ var d3 = require("d3"),
     video = require("./video.js"),
     audio = require("./audio.js");
 
-d3.json("/settings/themes.json", function(err, themes){
+d3.json(window.location.protocol + "//" + window.location.host + "/settings/themes.json", function(err, themes){
 
   var errorMessage;
 
@@ -42,6 +42,8 @@ function submitted() {
   var theme = preview.theme(),
       caption = preview.caption(),
       selection = preview.selection(),
+      backgroundFile = preview.backgroundFile(),
+      waveformColor = preview.waveformColor(),
       file = preview.file();
 
   if (!file) {
@@ -63,6 +65,8 @@ function submitted() {
   var formData = new FormData();
 
   formData.append("audio", file);
+  formData.append("backgroundImage", backgroundFile);
+  formData.append("waveformColor", waveformColor);
   if (selection.start || selection.end) {
     formData.append("start", selection.start);
     formData.append("end", selection.end);
@@ -173,6 +177,8 @@ function initialize(err, themesWithImages) {
 
   // If there's an initial piece of audio (e.g. back button) load it
   d3.select("#input-audio").on("change", updateAudioFile).each(updateAudioFile);
+  d3.select("#input-background-image").on("change", updateBackgroundFile).each(updateBackgroundFile);
+  d3.select("#input-waveform-color").on("change", updateWaveformColor).each(updateWaveformColor);
 
   d3.select("#return").on("click", function(){
     d3.event.preventDefault();
@@ -216,6 +222,26 @@ function updateAudioFile() {
 
   });
 
+}
+
+function updateBackgroundFile() {
+  preview.loadBackgroundImage(this.files[0], function(err) {
+    if(err) {
+      console.warn(err);
+    }
+  });
+
+  // disable option to customize waveform color unless there is a custom background
+  if (this.files[0]) {
+    d3.select('#input-waveform-color').attr('disabled', null);
+  } else {
+    d3.select('#input-waveform-color').attr('disabled', 'disabled');
+    preview.loadWaveformColor(null);
+  }
+}
+
+function updateWaveformColor() {
+  preview.loadWaveformColor(this.value);
 }
 
 function updateCaption() {
