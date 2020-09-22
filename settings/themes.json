@@ -109,11 +109,20 @@
     "waveColor": "#bc8bb8",
     "backgroundImage": "Audiog640_BusinessBooks.jpg"
   },
-  "Every Thing Else": {
+  "Culture Call": {
     "waveBottom": 719,
     "waveTop": 320,
     "pattern": "bricks",
-    "backgroundImage": "everythingelse.png",
+    "backgroundImage": "culture-call.png",
+    "foregroundColor": "#fff"
+  },
+  "Culture Call Square": {
+    "width": 640,
+    "height": 640,
+    "waveBottom": 640,
+    "waveTop": 340,
+    "pattern": "bricks",
+    "backgroundImage": "culture-call-square.png",
     "foregroundColor": "#fff"
   },
   "Hard Currency": {
